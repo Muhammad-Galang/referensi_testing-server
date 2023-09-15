@@ -13,6 +13,7 @@ class User extends Controller {
 	{
 		$data['title'] = 'Data User';
 		$data['user'] = $this->model('UserModel')->getAllUser();
+		Flasher::setMessage('Login Berhasil!','Selamat Datang Admin','success');
 		$this->view('templates/header', $data);
 		$this->view('templates/sidebar', $data);
 		$this->view('user/index', $data);
@@ -76,9 +77,9 @@ class User extends Controller {
 	public function updateUser(){	
 		if(empty($_POST['password'])) {
 			if( $this->model('UserModel')->updateDataUser($_POST) > 0 ) {
-			Flasher::setMessage('Berhasil','diupdate','success');
-			header('location: '. base_url . '/user');
-			exit;			
+				Flasher::setMessage('Berhasil','diupdate','success');
+				header('location: '. base_url . '/user');
+				exit;			
 			}else{
 				Flasher::setMessage('Gagal','diupdate','danger');
 				header('location: '. base_url . '/user');
@@ -87,9 +88,9 @@ class User extends Controller {
 		} else {
 			if($_POST['password'] == $_POST['ulangi_password']) {
 				if( $this->model('UserModel')->updateDataUser($_POST) > 0 ) {
-				Flasher::setMessage('Berhasil','diupdate','success');
-				header('location: '. base_url . '/user');
-				exit;			
+					Flasher::setMessage('Berhasil','diupdate','success');
+					header('location: '. base_url . '/user');
+					exit;			
 				}else{
 					Flasher::setMessage('Gagal','diupdate','danger');
 					header('location: '. base_url . '/user');
