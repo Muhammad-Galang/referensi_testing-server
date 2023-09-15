@@ -15,10 +15,10 @@ class Login extends Controller {
 
 				//$this->model('LoginModel')->isLoggedIn($_SESSION['session_login']);
 			
-			header('location: '. base_url . '/user');
+			header('location: '. base_url . '/User');
 		} else {
 			Flasher::setMessage('Username / Password','salah.','danger');
-			header('location: '. base_url . '/login');
+			header('location: '. base_url . '/Login');
 			exit;	
 		}
 	}

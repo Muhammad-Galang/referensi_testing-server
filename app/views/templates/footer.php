@@ -1,9 +1,9 @@
 
-  <footer class="main-footer">
-    <div class="float-right d-none d-sm-block">
-      <b>Version</b> 1.0.0
-    </div>
-    <strong>Copyright &copy;2019 Bukita All rights
+<footer class="main-footer">
+  <div class="float-right d-none d-sm-block">
+    <b>Version</b> 1.0.0
+  </div>
+  <strong>Copyright &copy;2019 Bukita All rights
     reserved.
   </footer>
 
@@ -20,3 +20,8 @@
 <script src="<?= base_url; ?>/dist/js/demo.js"></script>
 </body>
 </html>
+
+<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+ <span aria-hidden="true">&times;</span>
+</button>
+</div>';

@@ -5,7 +5,7 @@ class Kategori extends Controller {
 	{	
 		if($_SESSION['session_login'] != 'sudah_login') {
 			Flasher::setMessage('Login','Tidak ditemukan.','danger');
-			header('location: '. base_url . '/login');
+			header('location: '. base_url . '/Login');
 			exit;
 		}
 	} 
@@ -52,7 +52,7 @@ class Kategori extends Controller {
 	{		
 		if( $this->model('KategoriModel')->tambahKategori($_POST) > 0 ) {
 			Flasher::setMessage('Berhasil','ditambahkan','success');
-			header('location: '. base_url . '/kategori');
+			header('location: '. base_url . '/Kategori');
 			exit;			
 		}else{
 			Flasher::setMessage('Gagal','ditambahkan','danger');
@@ -68,7 +68,7 @@ class Kategori extends Controller {
 			exit;			
 		}else{
 			Flasher::setMessage('Gagal','diupdate','danger');
-			header('location: '. base_url . '/kategori');
+			header('location: '. base_url . '/Kategori');
 			exit;	
 		}
 	}
@@ -76,11 +76,11 @@ class Kategori extends Controller {
 	public function hapus($id){
 		if( $this->model('KategoriModel')->deleteKategori($id) > 0 ) {
 			Flasher::setMessage('Berhasil','dihapus','success');
-			header('location: '. base_url . '/kategori');
+			header('location: '. base_url . '/Kategori');
 			exit;			
 		}else{
 			Flasher::setMessage('Gagal','dihapus','danger');
-			header('location: '. base_url . '/kategori');
+			header('location: '. base_url . '/Kategori');
 			exit;	
 		}
 	}
