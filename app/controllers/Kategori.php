@@ -56,7 +56,7 @@ class Kategori extends Controller {
 			exit;			
 		}else{
 			Flasher::setMessage('Gagal','ditambahkan','danger');
-			header('location: '. base_url . '/kategori');
+			header('location: '. base_url . '/Kategori');
 			exit;	
 		}
 	}
@@ -64,7 +64,7 @@ class Kategori extends Controller {
 	public function updateKategori(){	
 		if( $this->model('KategoriModel')->updateDataKategori($_POST) > 0 ) {
 			Flasher::setMessage('Berhasil','diupdate','success');
-			header('location: '. base_url . '/kategori');
+			header('location: '. base_url . '/Kategori');
 			exit;			
 		}else{
 			Flasher::setMessage('Gagal','diupdate','danger');

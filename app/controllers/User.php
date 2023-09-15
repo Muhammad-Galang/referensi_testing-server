@@ -56,22 +56,22 @@ class User extends Controller {
 			$row = $this->model('UserModel')->cekUsername();
 			if($row['username'] == $_POST['username']){
 				Flasher::setMessage('Gagal','Username yang anda masukan sudah pernah digunakan!','danger');
-				header('location: '. base_url . '/user/tambah');
+				header('location: '. base_url . '/User/tambah');
 				exit;	
 			} else {
 				if( $this->model('UserModel')->tambahUser($_POST) > 0 ) {
 					Flasher::setMessage('Berhasil','ditambahkan','success','top-center');
-					header('location: '. base_url . '/user');
+					header('location: '. base_url . '/User');
 					exit;			
 				} else {
 					Flasher::setMessage('Gagal','ditambahkan','danger');
-					header('location: '. base_url . '/user');
+					header('location: '. base_url . '/User');
 					exit;	
 				}
 			}
 		} else {
 			Flasher::setMessage('Gagal','password tidak sama.','danger');
-			header('location: '. base_url . '/user/tambah');
+			header('location: '. base_url . '/User/tambah');
 			exit;	
 		}
 	}
@@ -80,27 +80,27 @@ class User extends Controller {
 		if(empty($_POST['password'])) {
 			if( $this->model('UserModel')->updateDataUser($_POST) > 0 ) {
 				Flasher::setMessage('Berhasil','diupdate','success','top-center');
-				header('location: '. base_url . '/user');
+				header('location: '. base_url . '/User');
 				exit;			
 			}else{
 				Flasher::setMessage('Gagal','diupdate','danger');
-				header('location: '. base_url . '/user');
+				header('location: '. base_url . '/User');
 				exit;	
 			}
 		} else {
 			if($_POST['password'] == $_POST['ulangi_password']) {
 				if( $this->model('UserModel')->updateDataUser($_POST) > 0 ) {
 					Flasher::setMessage('Berhasil','diupdate','success');
-					header('location: '. base_url . '/user');
+					header('location: '. base_url . '/User');
 					exit;			
 				}else{
 					Flasher::setMessage('Gagal','diupdate','danger');
-					header('location: '. base_url . '/user');
+					header('location: '. base_url . '/User');
 					exit;	
 				}
 			} else {
 				Flasher::setMessage('Gagal','password tidak sama.','danger');
-				header('location: '. base_url . '/user/tambah');
+				header('location: '. base_url . '/User/tambah');
 				exit;	
 			}
 		}
@@ -109,11 +109,11 @@ class User extends Controller {
 	public function hapus($id){
 		if( $this->model('UserModel')->deleteUser($id) > 0 ) {
 			Flasher::setMessage('Berhasil','dihapus','success','top-center');
-			header('location: '. base_url . '/user');
+			header('location: '. base_url . '/User');
 			exit;			
 		}else{
 			Flasher::setMessage('Gagal','dihapus','danger');
-			header('location: '. base_url . '/user');
+			header('location: '. base_url . '/User');
 			exit;	
 		}
 	}
