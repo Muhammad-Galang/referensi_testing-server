@@ -20,7 +20,7 @@
           <!-- Add icons to the links using the .nav-icon class
            with font-awesome or any other icon font library -->
            <li class="nav-item">
-            <a href="<?php echo 'base_url'; ?>/home" class="nav-link">
+            <a href="<?php echo 'base_url'; ?>/Home" class="nav-link">
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
                 Dashboard
@@ -29,7 +29,7 @@
           </li>
           <li class="nav-header">Data</li>
           <li class="nav-item">
-            <a href="<?= base_url; ?>/kategori" class="nav-link">
+            <a href="<?= base_url; ?>/Kategori" class="nav-link">
               <i class="nav-icon fas fa-th"></i>
               <p>
                 Kategori
@@ -37,7 +37,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="<?= base_url; ?>/buku" class="nav-link">
+            <a href="<?= base_url; ?>/Buku" class="nav-link">
               <i class="nav-icon fas fa-th"></i>
               <p>
                 Buku
@@ -45,7 +45,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="<?= base_url; ?>/user" class="nav-link">
+            <a href="<?= base_url; ?>/User" class="nav-link">
               <i class="nav-icon fas fa-th"></i>
               <p>
                 User
@@ -54,7 +54,7 @@
           </li>
           <li class="nav-header">Extra</li>
           <li class="nav-item">
-            <a href="<?= base_url; ?>/about" class="nav-link">
+            <a href="<?= base_url; ?>/About" class="nav-link">
               <i class="nav-icon fas fa-th"></i>
               <p>
                 About Me

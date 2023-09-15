@@ -10,7 +10,6 @@
         </div>
       </div><!-- /.container-fluid -->
     </section>
-
     <!-- Main content -->
     <section class="content">
       <div class="row">
@@ -26,7 +25,7 @@
         </div>
         <!-- /.card-header -->
         <!-- form start -->
-        <form role="form" action="<?= base_url; ?>/user/simpanuser" method="POST" enctype="multipart/form-data">
+        <form role="form" action="<?= base_url; ?>/User/simpanUser" method="POST" enctype="multipart/form-data">
           <div class="card-body">
             <div class="form-group">
               <label >Nama</label>
@@ -46,14 +45,11 @@
             </div>
           </div>
           <!-- /.card-body -->
-
           <div class="card-footer">
             <button type="submit" class="btn btn-primary">Submit</button>
           </div>
         </form>
       </div>
-
-
     </section>
     <!-- /.content -->
   </div>

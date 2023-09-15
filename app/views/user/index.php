@@ -24,18 +24,18 @@
 
       <div class="card">
         <div class="card-header">
-          <h3 class="card-title"><?= $data['title'] ?></h3> <a href="<?= base_url; ?>/user/tambah" class="btn float-right btn-xs btn btn-primary">Tambah User</a>
+          <h3 class="card-title"><?= $data['title'] ?></h3> <a href="<?= base_url; ?>/User/tambah" class="btn float-right btn-xs btn btn-primary">Tambah User</a>
         </div>
         <div class="card-body">
 
-          <form action="<?= base_url; ?>/user/cari" method="post">
+          <form action="<?= base_url; ?>/User/cari" method="post">
            <div class="row mb-3">
             <div class="col-lg-6">
               <div class="input-group">
                 <input type="text" class="form-control" placeholder="" name="key" >
                 <div class="input-group-append">
                   <button class="btn btn-outline-secondary float-right" type="submit">Cari Data</button>
-                  <a class="btn btn-outline-danger float-right" href="<?= base_url; ?>/user" >Reset</a>
+                  <a class="btn btn-outline-danger float-right" href="<?= base_url; ?>/User" >Reset</a>
                 </div>
               </div>
             </div>
@@ -58,7 +58,7 @@
                 <td><?= $row['nama'];?></td>
                 <td><?= $row['username'];?></td>
                 <td>
-                  <a href="<?= base_url; ?>/user/edit/<?= $row['id'] ?>" class="badge badge-info ">Edit</a> <a href="<?= base_url; ?>/user/hapus/<?= $row['id'] ?>" class="badge badge-danger" onclick="return confirm('Hapus data?');">Hapus</a>
+                  <a href="<?= base_url; ?>/User/edit/<?= $row['id'] ?>" class="badge badge-info ">Edit</a> <a href="<?= base_url; ?>/User/hapus/<?= $row['id'] ?>" class="badge badge-danger" onclick="return confirm('Hapus data?');">Hapus</a>
                 </td>
               </tr>
               <?php $no++; endforeach; ?>
